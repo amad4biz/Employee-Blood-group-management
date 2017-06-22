@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  table {
+   
+    overflow: scroll;
+    width:100%;
+    font-size: 14px;
+}
+.th{
+  font-size: 14px;
+}
+  </style>
+</head>
+<body>
+    <div class="container" >
+    <!-- Serach Panel-->
+      
+  <!--- Body Content After The Search -->
+    <div class="row">
+    
+                 <div class="panel panel-default">
+                                      <div class="panel-heading">Blood Demands In-Tray</div>
+                                    <div class="panel-body" style="width: 100%; height: 200px; overflow: scroll;" >
+                                          <table  *ngIf='bloodDemands && bloodDemands.length' item-width="98%;" style="overflow: auto !importtant;"  border="1px;" border-color="red" class="table table-bordered table-responsive table-striped">
+                                                    <thead>
+                                                      <tr >
+                                                          <th >BR id</th>
+                                                          <th>First Name</th>
+                                                          <th>Last Name</th>
+                                                          <th>patient Name</th>
+                                                          <th>Contact Number</th>
+                                                          <th>Blood Group</th>
+															                            <th>Pateint Age</th>
+                                                          <th>Gender</th>
+                                                          <th>Hospital Name</th>
+                                                          <th>Hospital Address</th>
+                                                          <th>Deaprtment Name</th>
+                                                          <th>Ward Number</th>
+                                                          <th>Bed No</th>
+                                                          <th>Doctor Name</th>
+                                                      </tr>
+                                                    </thead>
+                                                     <tbody>
+                                                          <tr  *ngFor='let br of bloodDemands'>
+                                                            <td >{{br.BR_id}}</td>
+                                                            <td>{{br.First_Name}}</td>
+                                                            <td>{{br.Last_Name}}</td>
+                                                            <td>{{br.Patient_Name}}</td>
+                                                            <td>{{br.Req_Contact_number}}</td>
+                                                            <td>{{br.Blood_Group}}</td>
+                                                            <td>{{br.Pateint_Age}}</td>
+                                                            <td>{{br.Gender}}</td>
+                                                            <td>{{br.Hospital_Name}}</td>
+                                                            <td>{{br.Hospital_Address}}</td>
+                                                            <td>{{br.Dept_Name}}</td>
+                                                            <td>{{br.Ward_number}}</td>
+                                                            <td>{{br.Bed_No}}</td>
+                                                            <td>{{br.Consultant_Doc_Name}}</td>
+                                                          </tr>
+                                                      </tbody>
+                                            </table> 
+                                 </div>
+              </div>
+      </div>
+
+<!-- Send Notifiaction On Button Click Event-->
+        
+    </div>
+</body>
+</html>

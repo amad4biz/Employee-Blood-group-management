@@ -1,0 +1,103 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container" >
+       
+
+            <div class="jumbotron">
+                 <form  novalidate  #form="ngForm" (submit)="empRegistrationSubmit(form.value)"  >
+                  <div class="form-white-background">
+
+                         <div class="form-group row">
+                                <label for="example-text-input" class="col-2 col-form-label">First Name</label>
+                                <div class="col-10">
+                                    <input class="form-control" id="FirstName" #FirstName="ngModel"  [(ngModel)]="employee.FirstName"   type="text" value="" name="FirstName" > 
+                                </div>
+                        </div>
+
+                            <div class="form-group row">
+                                <label for="example-text-input" class="col-2 col-form-label">Last Name</label>
+                                <div class="col-10">
+                                    <input class="form-control" id="LastName" #LastName="ngModel"  [(ngModel)]="employee.LastName" type="text" value="" name="txtLastName" >
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="example-text-input" class="col-2 col-form-label">City</label>
+                                <div class="col-10">
+                                    <input class="form-control" id="City"  #City="ngModel" [(ngModel)]="employee.City" type="text" value="" name="example-email-input" >
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="example-text-input" class="col-2 col-form-label">Address</label>
+                                <div class="col-10">
+                                    <input class="form-control" id="Emp_Address" #Emp_Address="ngModel" [(ngModel)]="employee.Emp_Address" type="text" value="" name="txtAddress" >
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="example-text-input" class="col-2 col-form-label">Designation</label>
+                                <div class="col-10">
+                                    <input class="form-control" id="Designation" #Designation="ngModel"  [(ngModel)]="employee.Designation" type="text" value="" name="txtDesignation" >
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="example-text-input" class="col-2 col-form-label">DOB</label>
+                                <div class="col-10">
+                                    <input class="form-control" id="DOB" #DOB="ngModel"  [(ngModel)]="employee.DOB" type="text" value="" name="txtEmpDOB" >
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="example-text-input" class="col-2 col-form-label">DOJ</label>
+                                <div class="col-10">
+                                    <input class="form-control" id="DOJ" #DOJ="ngModel" [(ngModel)]="employee.DOJ" type="text" value="" name="txtEmpDOJ" >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="example-text-input" class="col-2 col-form-label">Email ID</label>
+                                <div class="col-10">
+                                    <input class="form-control" id="EmailId" #EmailId="ngModel"  [(ngModel)]="employee.EmailId" type="email" value="" name="txtEmpEmailID" >
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="example-text-input" class="col-2 col-form-label">Gender</label>
+                                <div class="col-10">
+                                    <input class="form-control" id="Gender" #Gender="ngModel"  [(ngModel)]="employee.Gender" type="tel" value="text" name="txtEmpGender" >
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="example-text-input" class="col-2 col-form-label">Blood Group</label>
+                                <div class="col-10">
+                                    <input class="form-control" id="BloodGroup" #BloodGroup="ngModel"  [(ngModel)]="employee.BloodGroup" type="text" value="" name="txtEmpBllodGroup" >
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="example-number-input" class="col-2 col-form-label">Contact Number</label>
+                                <div class="col-10">
+                                    <input class="form-control" id="ContactNumber" #ContactNumber="ngModel"  [(ngModel)]="employee.ContactNumber" type="number" value="" name="txtContactNumber" >
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                                <button id="btnSave" name="btnSave" class="btn btn-primary" [disabled]="!form.form.valid">Submit</button>		
+                                		
+                            </div>
+                   </div>
+             </form>
+     </div>
+ 
+  </div>
+</body>
+</html>
